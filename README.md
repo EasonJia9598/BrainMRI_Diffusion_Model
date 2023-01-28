@@ -18,21 +18,6 @@ we wish to use admitting a progressive lossy decompression scheme that
 can be interpreted as a generalization of autoregressive decoding \[5\]
 to further improve the performance of \[4\]'s model.
 
-LITERATURE SURVEY
-=================
-
-In recent years, people are devoted to using Deep learning models to
-solve the computer vision tasks in Medical domain's realistic problems.
-Image synthesis is a crucial part of those problems. MRI, radiology, and
-CT scans' synthesis are showing good results by GANS \[6\]. In that
-paper, they used two state-of-art methods in 2018 for MRI image
-synthesis. First, they used Replica method that estimates a nonlinear
-mapping between image patches from the source contrast onto the
-individual voxels from the target contrast \[16\]. Then they used
-Multimodal method that uses an end-to-end neural network to estimate the
-target image given the source image as input. By applying this two-step
-GANs model, they successfully achieved 0.952±.018 SSIM score.
-
 PROBLEM STATEMENT
 =================
 
@@ -49,21 +34,6 @@ to train and the inference time is large than the Diffusion models
 \[6\]. Here, we would like to try the state-of-art technique for image
 synthesis by Denosing Diffusion model to solve this task.
 
-DATASET
-=======
-
-We use kaggle dataset [Brian Tumor
-MRI](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri)
-to set the baseline images for our model to inference. This dataset
-contains 4 types of images, Glioma Tumor MRI scans, Meningioma Tumor
-Scans, Healthy Brain Scans, and Pituitary Tumor Scans (As in Figure 1).
-In total, we have 3264 different Brian MRI scan images.
-
-![](./image/b1f629bef08eb870b04bdd674263dee5f0426400016f377848ec2cd09dd77307){width="\\textwidth"}
-
-Four different types of Brain MRI Scan from Left to Right: Glioma Tumor
-Scan, Meningioma Tumor Scan, Healthy Brain Scan, and Pituitary Tumor
-Scan.
 
 PROPOSED TECHNIQUE
 ==================
@@ -72,7 +42,7 @@ Summary
 -------
 
 ![Regular Diffusion models inference process from
-\[4\]](./image/c5c9dcb0f0b3faaedf68d63fdef437a4a64908f06991aca721ec6fc9bcfd6d11){width="8cm"}
+\[4\]](./images/c5c9dcb0f0b3faaedf68d63fdef437a4a64908f06991aca721ec6fc9bcfd6d11){width="8cm"}
 
 Adding noises in each step of Markov Chain process until the data
 distribution converges to a given prior, i.e., standard Gaussian
@@ -85,7 +55,7 @@ noisy image that has the same distribution with a Gaussian noise
 distribution.
 
 ![Demonstration of adding Gaussian Noises into our MRI
-image](de92016894f1ed3254742f70cb9535d52ff6cb02fc95f6ad0aea13e9318ada69){width="8cm"}
+image](./images/de92016894f1ed3254742f70cb9535d52ff6cb02fc95f6ad0aea13e9318ada69){width="8cm"}
 
 Forward pass procedure on one Brain MRI scan image.
 
