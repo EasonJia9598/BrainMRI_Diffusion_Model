@@ -59,7 +59,7 @@ contains 4 types of images, Glioma Tumor MRI scans, Meningioma Tumor
 Scans, Healthy Brain Scans, and Pituitary Tumor Scans (As in Figure 1).
 In total, we have 3264 different Brian MRI scan images.
 
-![image](b1f629bef08eb870b04bdd674263dee5f0426400016f377848ec2cd09dd77307){width="\\textwidth"}
+![](image/b1f629bef08eb870b04bdd674263dee5f0426400016f377848ec2cd09dd77307){width="\\textwidth"}
 
 Four different types of Brain MRI Scan from Left to Right: Glioma Tumor
 Scan, Meningioma Tumor Scan, Healthy Brain Scan, and Pituitary Tumor
