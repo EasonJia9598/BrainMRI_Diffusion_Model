@@ -28,13 +28,8 @@ further improve the performance of [4]’s model.
 
 
 References
-[1] H. Huang, P. S. Yu, ￿￿￿ C. Wang, ‘An Introduction
-to Image Synthesis with Generative Adversarial
-Nets’. arXiv, 2018.
-[2] A. Ramesh ￿.￿., ‘Zero-Shot Text-to-Image Generation’.
-arXiv, 2021.
-[3] J. Yu ￿.￿., ‘Vector-quantized Image Modeling with
-Improved VQGAN’. arXiv, 2021.
-[4] M. Özbey ￿.￿., ‘Unsupervised Medical Image Translation
-with Adversarial Diffusion Models’. arXiv,
-2022.
+1. H. Huang, P. S. Yu, και C. Wang, ‘An Introduction to Image 
+Synthesis with Generative Adversarial Nets’. arXiv, 2018.
+2. A. Ramesh κ.ά., ‘Zero-Shot Text-to-Image Generation’. arXiv, 2021.
+3. J. Yu κ.ά., ‘Vector-quantized Image Modeling with Improved VQGAN’. arXiv, 2021.
+4. M. Özbey κ.ά., ‘Unsupervised Medical Image Translation with Adversarial Diffusion Models’. arXiv, 2022.
