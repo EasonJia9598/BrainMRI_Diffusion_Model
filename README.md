@@ -42,7 +42,7 @@ Summary
 -------
 
 ![Regular Diffusion models inference process from
-\[4\]](./images/c5c9dcb0f0b3faaedf68d63fdef437a4a64908f06991aca721ec6fc9bcfd6d11){width="8cm"}
+\[4\]](images/c5c9dcb0f0b3faaedf68d63fdef437a4a64908f06991aca721ec6fc9bcfd6d11){width="8cm"}
 
 Adding noises in each step of Markov Chain process until the data
 distribution converges to a given prior, i.e., standard Gaussian
@@ -55,7 +55,7 @@ noisy image that has the same distribution with a Gaussian noise
 distribution.
 
 ![Demonstration of adding Gaussian Noises into our MRI
-image](./images/de92016894f1ed3254742f70cb9535d52ff6cb02fc95f6ad0aea13e9318ada69){width="8cm"}
+image](images/de92016894f1ed3254742f70cb9535d52ff6cb02fc95f6ad0aea13e9318ada69){width="8cm"}
 
 Forward pass procedure on one Brain MRI scan image.
 
@@ -73,7 +73,7 @@ Detailed Model Structure
 ------------------------
 
 ![Flow Chart of the
-model](118c98de03fa5377aafe6e413d06bcff0140f8a272eb4abc35249ccbf59c9093.png){width="6cm"}
+model](images/118c98de03fa5377aafe6e413d06bcff0140f8a272eb4abc35249ccbf59c9093.png){width="6cm"}
 
 Flow chart of how the denoising diffusion model works.
 
