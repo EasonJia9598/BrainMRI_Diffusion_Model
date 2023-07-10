@@ -3,7 +3,7 @@ Main [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)
 Inference [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EasonJia9598/BrainMRI_Diffusion_Model/blob/main/Inference%20(1).ipynb)
 
 
-
+The updated report PDF has been uploaded to the repository. When I initially created this report, we were limited to a specific number of pages as requested.
 
 INTRODUCTION
 ============
