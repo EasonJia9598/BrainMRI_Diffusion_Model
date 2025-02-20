@@ -1,9 +1,101 @@
+
 Main     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EasonJia9598/BrainMRI_Diffusion_Model/blob/main/main%20(1).ipynb#scrollTo=f7444b0b)
 
 Inference     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EasonJia9598/BrainMRI_Diffusion_Model/blob/main/Inference%20(1).ipynb)
 
 
-The updated report PDF has been uploaded to the repository. When I initially created this report, we were limited to a specific number of pages as requested.
+
+
+# **MRIDiff: Image Synthesis of Brain MRI Scans with Denoising Diffusion Probabilistic Model**
+
+## **Abstract**
+
+Medical imaging plays a critical role in diagnosis and treatment planning. However, obtaining high-quality, diverse datasets for brain MRI analysis remains challenging due to privacy concerns and limited availability. This study presents **MRIDiff**, a **Denoising Diffusion Probabilistic Model (DDPM)** for **generating synthetic brain MRI scans**. By leveraging **deep learning and probabilistic diffusion models**, this work demonstrates how AI can **generate realistic medical images**, aiding in data augmentation for machine learning applications in healthcare.
+
+## **Introduction**
+
+Magnetic Resonance Imaging (MRI) is a fundamental tool for brain disorder diagnosis, but **limited availability of annotated medical datasets** poses challenges for AI-driven medical applications. Traditional **Generative Adversarial Networks (GANs)** have been used for synthetic MRI image generation but suffer from **mode collapse and unstable training dynamics**. 
+
+To overcome these issues, **diffusion models** have emerged as a superior alternative for image synthesis by **iteratively denoising Gaussian noise into high-fidelity images**. This project develops **MRIDiff**, an advanced diffusion model for generating synthetic **brain MRI scans**, improving dataset accessibility and enhancing medical AI research.
+
+---
+
+## **Methodology**
+
+### **1. Model Architecture: Denoising Diffusion Probabilistic Model (DDPM)**
+
+The **DDPM framework** is used to **generate synthetic brain MRI scans** by learning to reverse a diffusion process that gradually adds noise to training images. The architecture is based on **UNet**, a widely adopted **CNN-based encoder-decoder** network with skip connections.
+
+#### **Diffusion Process**
+1. A training MRI image is progressively **corrupted with Gaussian noise**.
+2. The model learns to **reverse the noise addition**, reconstructing the original image.
+3. During inference, the model **starts from pure noise** and iteratively **denoises to generate realistic MRI images**.
+
+### **2. Dataset & Preprocessing**
+- **Dataset:** Brain Tumor MRI Dataset (Kaggle), containing labeled MRI scans for **Glioma, Meningioma, Pituitary Tumors**, and **Healthy Brain Scans**.
+- **Preprocessing Steps:**
+  - **Normalization**: Standardized pixel values to improve model stability.
+  - **Augmentation**: Rotations, flips, and contrast adjustments to increase dataset diversity.
+  - **Resizing**: Images were resized to **256×256 pixels** for efficient model training.
+
+### **3. Training & Hyperparameter Tuning**
+- **Batch Size**: 32
+- **Learning Rate**: 2e-4
+- **Number of Diffusion Steps**: 300
+- **Optimizer**: AdamW
+- **GPU Acceleration**: Trained on **NVIDIA Tesla T4 (16GB VRAM)**
+
+### **4. Performance Evaluation Metrics**
+- **FID Score (Fréchet Inception Distance)**: Measures image realism by comparing synthetic images to real MRI scans.
+- **MSE (Mean Squared Error)**: Evaluates reconstruction accuracy.
+- **PSNR (Peak Signal-to-Noise Ratio)**: Quantifies image quality relative to original MRI scans.
+
+---
+
+## **Results & Analysis**
+
+### **1. Generated MRI Samples**
+The trained **MRIDiff model** successfully generated **high-quality, diverse MRI images**, capturing anatomical structures with fine details. Below are some key observations:
+
+- **High Structural Fidelity**: Synthetic scans closely resemble real MRI images.
+- **Effective Noise Reduction**: The iterative denoising process preserves anatomical details.
+- **Class-Specific Generation**: The model successfully differentiates between healthy and diseased brain scans.
+
+### **2. Comparative Evaluation: GANs vs. Diffusion Models**
+
+- **Lower FID** indicates more realistic images.
+- **Higher PSNR** suggests better image reconstruction quality.
+- **Diffusion models outperform GANs** by producing more **stable and diverse outputs**.
+
+### **3. Impact on Medical AI Research**
+- **Improved Data Augmentation**: Enhances training datasets for brain tumor detection models.
+- **Bridging the Data Scarcity Gap**: Allows medical researchers to generate synthetic MRI scans where real data is limited.
+- **Better Generalization**: Enables AI models to train on more diverse datasets, reducing bias.
+
+---
+
+## **Challenges and Future Improvements**
+
+### **1. Computational Cost**
+- Training diffusion models is **computationally expensive**. Future work could explore **more efficient architectures** or **distilled diffusion models** for faster inference.
+
+### **2. Higher Resolution Generation**
+- Currently, MRI scans are limited to **256×256 resolution**. Future iterations will incorporate **Super-Resolution Diffusion Models** to enhance image clarity.
+
+### **3. Multi-Modal Image Synthesis**
+- Extending the model to generate **multi-modal MRI scans** (T1-weighted, T2-weighted, FLAIR) will further **enhance medical imaging applications**.
+
+---
+
+## **Conclusion**
+
+This project successfully demonstrates that **Denoising Diffusion Probabilistic Models (DDPMs)** can generate **realistic, high-quality brain MRI scans**, providing a valuable tool for **medical AI research**. Compared to GANs, **diffusion models produce more stable, high-fidelity medical images**, improving dataset accessibility for **AI-driven diagnostic tools**. 
+
+Future directions include **higher resolution generation, multi-modal synthesis, and optimized diffusion techniques** to further **advance AI in medical imaging**.
+
+---
+
+More details in the PDF file. 
 
 INTRODUCTION
 ============
